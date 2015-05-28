@@ -1,9 +1,29 @@
-describe("wordCount", function() {
-  it("returns the count of a single word", function() {
-    expect(wordCount("kitten kitten")).to.eql({"kitten": 2});
+describe("binaryToInteger", function() {
+  it("converts a small binary input into an integer", function() {
+    expect(binaryToInteger("011")).to.equal(3);
+  });
+  it("converts a large binary input into an integer", function() {
+    expect(binaryToInteger("11000000111001")).to.equal(12345);
   });
 
-  it("returns counts for a variety of words", function() {
-    expect(wordCount("kitten kitten puppie hippo kitten puppie")).to.eql({"kitten": 3, "puppie": 2, "hippo": 1});
+});
+
+describe("trinary", function() {
+  it("converts a small trinary input to an integer", function() {
+    expect(trinaryToInteger("121")).to.equal(16);
+  });
+
+  it("converts a large trinary input to an integer", function() {
+    expect(trinaryToInteger("11012212")).to.equal(3074);
+  });
+});
+
+describe("hexadecimalToInteger", function() {
+  it("converts a small hexadecimal input to an integer", function() {
+    expect(hexToInteger("C")).to.equal(12);
+  });
+
+  it("converts a large hexadecimal input to an integer", function() {
+    expect(hexToInteger("23C981")).to.equal(2345345);
   });
 });
